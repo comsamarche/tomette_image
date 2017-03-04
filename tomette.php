@@ -1,11 +1,5 @@
 <?php Header('Content-type: image/svg+xml; charset=utf-8');?>
-<?php
-  // vérification
-	(isset($_GET['color']))? $color = '#'.$_GET['color']: $color = 'none';
-	(isset($_GET['bg']))? $bg = $_GET['bg'] : $bg = '';
-	$width= 150*1.15;
-	$x = 150*0.07; 
-?>
+
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
