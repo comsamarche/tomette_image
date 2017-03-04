@@ -1,4 +1,6 @@
-<?php header('Content-type: image/svg+xml');
+<?php Header('Content-type: image/svg+xml; charset=utf-8');?>
+<?php
+  // vérification
 	(isset($_GET['color']))? $color = '#'.$_GET['color']: $color = 'none';
 	(isset($_GET['bg']))? $bg = $_GET['bg'] : $bg = '';
 	$width= 150*1.15;
