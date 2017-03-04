@@ -1,0 +1,134 @@
+/* -----------
+-> GlOBAL
+-------------- */
+body {
+  background-color: #f8f7f3;
+}
+
+.container {
+  display: block;
+  position: relative;
+  width: 60%;
+  margin: 10% auto;
+}
+
+/* -----------
+-> UTILITIES
+-------------- */
+.animated, .bt_reserver {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.pulse, .bt_reserver:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+/* -----------
+-> TOMMETTE
+-------------- */
+.tommette {
+  display: block;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.tommette__img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+.tommette__img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc( 100% + 30px);
+  height: calc( 100% + 30px);
+  z-index: 1;
+  background-image: url("https://comsamarche.github.io/tomette_image/tomette.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+}
+.tommette svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* -----------
+-> BOUTON
+-------------- */
+.bt_reserver {
+  position: relative;
+  bottom: calc( 83px + 15px);
+  left: 50%;
+  margin-left: -42.5px;
+  z-index: +4;
+  display: block;
+  width: 83px;
+  height: 1px;
+  line-height: 83px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #FFF;
+  opacity: 0.9;
+}
+.bt_reserver::after {
+  content: "";
+  display: block;
+  width: 83px;
+  height: 83px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(top, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+  background-image: linear-gradient(top, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+  background-image: url(https://comsamarche.github.io/tomette_image/tomette.php?color=red);
+  z-index: -1;
+}
+.bt_reserver:hover {
+  color: #FFF;
+  opacity: 1;
+}
